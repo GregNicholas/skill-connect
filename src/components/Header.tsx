@@ -1,14 +1,15 @@
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 import { MouseEvent } from 'react';
 import { FaUserAlt } from "react-icons/fa";
 
 export default function Header () {
   const router = useRouter();
 
-  const goToAddPost = (e: MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    e.preventDefault();
-    router.push('/addPost');
-  }
+  // const goToAddPost = (e: MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+  //   e.preventDefault();
+  //   router.push('/addPost');
+  // }
 
     return (
       <>
@@ -20,7 +21,13 @@ export default function Header () {
             lg:dark:bg-zinc-800/30"
         >
           <h1 className="text-3xl sm:text-6xl select-none">Skill Connect</h1>
-          <a href="/addPost" onClick={(e) => goToAddPost}>Add Post</a>
+          {/* <a href="/addPost" onClick={(e) => goToAddPost}>Add Post</a> */}
+          <Link href="/">
+            <p className="text-sm select-none">Home</p>
+          </Link>
+          <Link href="/addPost">
+            <p className="text-sm select-none">Add Post</p>
+          </Link>
           <FaUserAlt 
             className="text-xl sm:text-3xl duration-300 hover:opacity-40 cursor-pointer"
           />
