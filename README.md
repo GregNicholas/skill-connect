@@ -1,3 +1,88 @@
+# Skill Connect
+
+## talent and application management app
+
+### Links
+
+- Live Site URL: under construction
+
+## Table of contents
+
+- [Overview](#overview)
+  - [Requirements](#requirements)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Things to add](#things-to-add)
+- [Run Locally](#run-local)
+- [Author](#author)
+
+## Overview
+
+### Requirements
+
+Users should be able to:
+
+- Organizations submit a post to request specific talent for a task or job role.
+- The form should ask for a title, description, keywords, and the things they want to request from applicants, such as a resume, contact info, links, skills list, writing sample.
+- Post titles can be listed on a search page, with each having a link to its post page that displays all info and a button to open a form to submit an application or proposal.
+- The organization will have a list of their posts on their dashboard, and a list of responses from others. The response items can be edited by the organization to show status - new/contacted/interviewing/offer/rejected.
+- Indivuduals can search posts that match skills they are offering.
+- Individuals will have an activity list which will be updated appropriately.
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Receive form validations
+
+### Screenshot
+
+## My process
+
+### Built with
+
+- [Next.js](https://nextjs.org/) - JS library
+- [TypeScript](https://www.typescriptlang.org/) - Strongly typed JavaScript language
+- [tailwind](https://tailwindcss.com/) - For styles
+- [Node.js](https://nodejs.org/en/) - Javascript runtime environment
+- [Supabase](https://supabase.com/) - Real-time database that allows developers to store and sync data across multiple devices in real-time
+- [Postgresql](https://www.postgresql.org/) - PostgreSQL is a powerful, open source object-relational database system
+- [Prisma](https://www.prisma.io/) - Server-side library that helps read and write data to the database
+
+### What I learned
+
+### Things to add
+
+## Run Local
+
+Clone to local machine
+Add .env and add your MONGO_URI
+NODE_ENV = development
+PORT = <your chosen port>
+
+### Install dependencies
+
+```
+# Backend deps
+npm install
+
+# Frontend deps
+cd frontend
+npm install
+```
+
+### Run backend and frontend concurrently
+
+```
+npm run dev
+```
+
+## Author
+
+- Website - [Greg Schoenberg](https://gregschoenberg.com)
+
+## create next app info:
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
