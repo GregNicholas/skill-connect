@@ -19,7 +19,7 @@ export default function Home({ posts }: Props) {
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
         Organization or contributer
       </div>
-      <ul className="flex flex-col items-center justify-between mb-48">
+      <ul className="flex flex-col items-start justify-between max-w-lg mx-auto mb-48">
         {posts?.map((post, index) => (
           <li key={index}>
             <Post post={post} user={{name: 'Greg'}} />
