@@ -5,7 +5,15 @@ export default function Component() {
   if (session) {
     return (
       <>
-        Signed in as {session.user ? session.user.email : "no name"} <br />
+      {session.user ? 
+        <div>
+            <p>Signed in as {session.user ? session.user.email : "no name"} </p>
+            <div className="max-w-xl">
+                <img src={session.user?.image || ""} alt="user profile picture" /> <br />
+            </div>
+        </div> :
+        <div>no user info available</div>
+      }
         <button onClick={() => signOut()}>Sign out</button>
       </>
     )
