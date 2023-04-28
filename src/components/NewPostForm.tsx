@@ -69,12 +69,12 @@ export default function NewPostForm() {
                     formInfo.fields.map((data, index) => {
                         const {label} = data;
                         return (
-                            <div className="h-10 flex items-center w-full max-w-[40ch] mb-3" key={index}>
+                            <div className="h-10 flex gap-2 items-center w-full max-w-[40ch] mb-3" key={index}>
                             <input className={inputStyle}
                                 onChange={(e) => handleChange(e)}
                                 value={label}
                                 type="text" 
-                                placeholder={"e.g. Make coffee"} 
+                                placeholder={"e.g. previous position"} 
                                 aria-label="new subtask"
                                 required
                             /> 
