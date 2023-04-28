@@ -23,7 +23,7 @@ export default function Header () {
           <Link href="/addPost">
             <p className="text-sm select-none">Add Post</p>
           </Link>
-          <Link href="/profile">
+          <Link href="/profile" className="w-8">
             {session?.user?.image ? <img src={session?.user.image} /> : 
               <FaUserAlt 
                 className="text-xl sm:text-3xl duration-300 hover:opacity-40 cursor-pointer"
