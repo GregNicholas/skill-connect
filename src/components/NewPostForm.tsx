@@ -26,6 +26,7 @@ export default function NewPostForm() {
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
+        console.log(name)
         if (name.includes("input")) {
             const inputIndex = parseInt(name.replace("input", ""));
             const updatedFields = [...formInfo.fields];
@@ -44,7 +45,11 @@ export default function NewPostForm() {
     const removeInputField = (index: number) => {
         const newFields = [...formInfo.fields];
         newFields.splice(index, 1);
-        setFormInfo((prev) => ({...prev, fields: newFields}));
+        //update the name property so that it matches the index in the fields array
+        const updatedFields = newFields.map((field, i) => {
+            return {val: field.val, name: `input${i}`}
+        });
+        setFormInfo((prev) => ({...prev, fields: updatedFields}));
     }
 
     const inputStyle = "outline-none duration-300 border-b-2 border-solid border-white focus:border-cyan-300 text-slate-900 p-2 w-full max-w-[40ch]"
