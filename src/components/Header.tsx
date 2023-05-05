@@ -2,11 +2,12 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { FaUserAlt } from "react-icons/fa";
 import { useSession, signIn, signOut } from "next-auth/react";
+import Image from 'next/image';
 
 export default function Header () {
   const router = useRouter();
   const { data: session } = useSession();
-
+console.log(session?.user?.image)
     return (
       <>
         <div 
@@ -24,7 +25,7 @@ export default function Header () {
             <p className="text-sm select-none">Add Post</p>
           </Link>
           <Link href="/profile" className="w-8">
-            {session?.user?.image ? <img src={session?.user.image} /> : 
+            {session?.user?.image ? <Image src={session?.user.image} height={32} width={32} alt="user image" /> : 
               <FaUserAlt 
                 className="text-xl sm:text-3xl duration-300 hover:opacity-40 cursor-pointer"
               />

@@ -83,10 +83,14 @@ export default function NewPostForm() {
                         )
                     })
                 }
-                <button className="px-4 py-2" onClick={addInputField}>Add an input</button>
+                <button 
+                    type="button" 
+                    className="px-4 py-2 border-solid rounded-xl border-slate-300" 
+                    onClick={addInputField}
+                >Add an input</button>
                 <button 
                     type="submit" 
-                    className="bg-cyan-300 hover:bg-cyan-400 text-white font-bold py-2 px-4 rounded"
+                    className="bg-slate-300 hover:bg-slate-500 text-white font-bold py-2 px-4 rounded"
                 >Submit</button>
             </form>
         </>
